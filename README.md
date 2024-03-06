@@ -39,3 +39,17 @@ Este proyecto tiene como objetivo desarrollar una aplicación web utilizando el 
 ### Comandos útiles para desarrollar el proyecto en Laravel
 
 - php artisan serve
+
+Configuración necesaria después de hacer git clone:
+
+  - cd tienda
+  - composer install
+  - cp .env.example .env
+  - php artisan key:generate
+  - php artisan migrate
+
+### Versionado
+
+- Laravel v10.47.0
+- PHP v8.1.2
+- Apache/2.4.56
