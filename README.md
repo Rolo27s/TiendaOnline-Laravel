@@ -12,12 +12,12 @@ Este proyecto tiene como objetivo desarrollar una aplicación web utilizando el 
 
 - [x] Instalación de Laravel.
 - [x] Configuración de la conexión a la base de datos.
-- [ ] Configuración del sistema de autenticación.
-- [ ] Configuración de la gestión de roles y permisos. (admin/guest)
+- [x] Configuración del sistema de autenticación.
+- [x] Configuración de la gestión de roles y permisos. (admin/guest)
 
 ## 3. Desarrollo de Funcionalidades
 
-- [ ] Implementación y desarrollo del catálogo de productos. (crud)
+- [x] Implementación y desarrollo del catálogo de productos. (crud)
 - [ ] Desarrollo del carrito de compras.
 - [ ] Mockup de pasarela de pago con form de datos de cliente (3 opciones de pago: standard, express, recoger en tienda física)
 - [ ] Implementación del sistema de pedidos y facturación. (ver resumen de pedido y guardar en bd)
