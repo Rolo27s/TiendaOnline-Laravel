@@ -34,6 +34,12 @@ Este proyecto tiene como objetivo desarrollar una aplicación web utilizando el 
 - [ ] Documentación básica del Proyecto y casos de uso.
 
 ---
+
+### Credenciales de admin
+
+- Email: admin@admin.com
+- Password: 1234
+
 ---
 
 ### Comandos útiles para desarrollar el proyecto en Laravel
