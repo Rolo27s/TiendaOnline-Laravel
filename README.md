@@ -51,5 +51,8 @@ Configuración necesaria después de hacer git clone:
 ### Versionado
 
 - Laravel v10.47.0
+  
 - PHP v8.1.2
 - Apache/2.4.56
+
+https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.25/xampp-windows-x64-8.1.25-0-VS16.zip/download
