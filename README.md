@@ -11,7 +11,7 @@ Este proyecto tiene como objetivo desarrollar una aplicación web utilizando el 
 ## 2. Instalación y Configuración
 
 - [x] Instalación de Laravel.
-- [ ] Configuración de la conexión a la base de datos.
+- [x] Configuración de la conexión a la base de datos.
 - [ ] Configuración del sistema de autenticación.
 - [ ] Configuración de la gestión de roles y permisos. (admin/guest)
 
