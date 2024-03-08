@@ -35,6 +35,10 @@ Este proyecto tiene como objetivo desarrollar una aplicación web utilizando el 
 
 ---
 
+### URL's de gestion de productos
+
+- http://127.0.0.1:8000/products
+
 ### Credenciales de admin
 
 - Email: admin@admin.com

@@ -11,6 +11,8 @@ return [
     */
 
     'user' => [
+        'email' => 'admin@admin.com',
+        'password' => '1234',
         'add_default_role_on_register' => true,
         'default_role'                 => 'user',
         'default_avatar'               => 'users/default.png',

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +15,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('vista1');
+})->name('vista1');
 
+Route::get('/vista2', function () {
+    return view('vista2');
+})->name('vista2');
+
+Route::get('/vista3', function () {
+    return view('vista3');
+})->name('vista3');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::resource('products', ProductController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
