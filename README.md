@@ -53,6 +53,7 @@ Configuración necesaria después de hacer git clone:
   - cp .env.example .env
   - php artisan key:generate
   - php artisan migrate
+  - php artisan db:seed --class=CatalogoSeeder
 
 ### Versionado
 
