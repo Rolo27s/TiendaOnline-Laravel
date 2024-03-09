@@ -67,16 +67,3 @@ Configuración necesaria después de hacer git clone:
 - Apache/2.4.56
 
 https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.25/xampp-windows-x64-8.1.25-0-VS16.zip/download
-
-### Hilo para Fran Marquez (borrar en un futuro)
-
-Tenemos la info de los productos en la base de datos (app/Models/Product.php) y 6 registros.
-La idea es consumir esa info y mostrarla en las vistas. La parte de las vistas se tocan en resources/views...
-
-En layouts esta la visstapadre que es el head (comun a vista1,2 y 3).
-
-La idea era que vista1 sea el home, vista2 los productos y vista3 nose...
-
-Con cubrir esto para el sababo estamos bien. Yo (fran) el sabado estoy fuera!!!Estare online el domingo entero y respondere a wasap, discord etc...
-
-GL !!!
