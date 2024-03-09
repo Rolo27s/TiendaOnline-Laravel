@@ -85,9 +85,13 @@ class CatalogoController extends Controller {
      */
     public function update(Request $request, Catalogo $catalogo)
     {
-        request()->validate(Catalogo::$rules);
+        $validatedData = $request->validate(Catalogo::$rules);
 
-        $catalogo->update($request->all());
+        $catalogo->producto = $validatedData['producto'];
+        $catalogo->detalles = $validatedData['detalles'] ?? null; // Optionally handle nullable fields
+        $catalogo->precio = $validatedData['precio'];
+
+        $catalogo->save();
 
         return redirect()->route('catalogos.index')
             ->with('success', 'Catalogo updated successfully');

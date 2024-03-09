@@ -4,6 +4,9 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Catalogo;
+use App\Models\Carrito;
+use App\Http\Controllers\CatalogoController;
+use App\Http\Controllers\CarritoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,25 +19,35 @@ use App\Models\Catalogo;
 |
 */
 
-Route::get('/', function () { // vista para mostrar todos los productos del catálogo
+    // Rutas generales de la web
+
+Route::get('/', function () { // home
+    return view('home');
+})->name('index');
+
+Route::get('/productos', function () { // vista para mostrar todos los productos del catálogo
     $catalogos = Catalogo::all(); // guardamos los datos de la tabla en una variable
-    return view('catalogo.index', compact('catalogos')); // cargamos la vista que está en resources/views/catalogo/index
+    return view('mostrarCatalogo', compact('catalogos')); // cargamos la vista que está en resources/views/catalogo/index
 })->name('productos');
 
-Route::get('/vista2', function () {
-    return view('vista2');
-})->name('vista2');
+    // Rutas de 'Catálogo'
 
-Route::get('/vista3', function () {
-    return view('vista3');
-})->name('vista3');
+Route::get('/admin', [CatalogoController::class, 'index'])->name('catalogos.index'); // mostrar todos
+Route::get('/admin/create', [CatalogoController::class, 'create'])->name('catalogos.create'); // mostrar formulario para añadir producto
+Route::post('/admin/store', [CatalogoController::class, 'store'])->name('catalogos.store'); // añadir producto
+Route::get('/admin/show/{id}', [CatalogoController::class, 'show'])->name('catalogos.show'); // mostrar 1 producto
+Route::get('/admin/{id}/edit', [CatalogoController::class, 'edit'])->name('catalogos.edit'); // mostrar formulario para editar producto
+Route::patch('/admin/update/{catalogo}', [CatalogoController::class, 'update'])->name('catalogos.update'); // editar producto
+Route::delete('/admin/delete/{id}', [CatalogoController::class, 'destroy'])->name('catalogos.destroy'); // borrar producto
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
+    // Rutas de 'Carrito'
 
-Route::resource('products', ProductController::class);
-Auth::routes();
+Route::get('/carrito', function () { // mostrar el carrito con todos los productos añadidos
+    $productos = Carrito::all();
+    return view('carrito.index', compact('productos'));
+})->name('carrito');
+Route::post('/carrito/add/', [CarritoController::class, 'store'])->name('carrito.add');
+Route::delete('/carrito/delete/{id}', [CarritoController::class, 'destroy'])->name('carrito.destroy');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();

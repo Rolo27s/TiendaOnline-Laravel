@@ -1,23 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.vistapadre')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+@section('titulo')
+Inicio
+@endsection
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+@section('contenidoPrincipal')
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <h1>Contenido de la página de inicio</h1>
+
+    <p>Hay que rellenar esto con lo que sea que vaya a llevar</p>
+
 @endsection
