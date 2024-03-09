@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Catalogo;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('vista1');
-})->name('vista1');
+Route::get('/', function () { // vista para mostrar todos los productos del catálogo
+    $catalogos = Catalogo::all(); // guardamos los datos de la tabla en una variable
+    return view('catalogo.index', compact('catalogos')); // cargamos la vista que está en resources/views/catalogo/index
+})->name('productos');
 
 Route::get('/vista2', function () {
     return view('vista2');

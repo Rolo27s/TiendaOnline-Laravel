@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
  * Class CatalogoController
  * @package App\Http\Controllers
  */
-class CatalogoController extends Controller
-{
+class CatalogoController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
@@ -18,10 +18,9 @@ class CatalogoController extends Controller
      */
     public function index()
     {
-        $catalogos = Catalogo::paginate();
+        $catalogos = Catalogo::all();
 
-        return view('catalogo.index', compact('catalogos'))
-            ->with('i', (request()->input('page', 1) - 1) * $catalogos->perPage());
+        return view('catalogo.index', compact('catalogos'));
     }
 
     /**

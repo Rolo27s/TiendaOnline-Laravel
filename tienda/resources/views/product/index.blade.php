@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.vistaPadre')
 
 @section('template_title')
     Product
