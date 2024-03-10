@@ -25,9 +25,9 @@ Este proyecto tiene como objetivo desarrollar una aplicación web utilizando el 
 
 ## 4. Diseño y Frontend
 
-- [ ] Diseño de la interfaz de usuario.
-- [ ] Implementación de las vistas utilizando Blade.
-- [ ] Integración de estilos CSS (Bootstrap, Tailwind CSS, etc.).
+- [x] Diseño de la interfaz de usuario.
+- [x] Implementación de las vistas utilizando Blade.
+- [x] Integración de estilos CSS (Bootstrap, Tailwind CSS, etc.).
 
 ## 5. Documentación
 
