@@ -15,7 +15,7 @@ class CarritoController extends Controller
             'id' => 'required|exists:catalogos,id',
             'cantidad' => 'required|integer|min:1',
         ]);
-    
+
         $carrito = new Carrito();
         $carrito->catalogo_id = $request->id;
         $carrito->cantidad = $request->cantidad;
@@ -25,13 +25,30 @@ class CarritoController extends Controller
             ->with('success', 'Producto añadido al carrito.');
     }
 
-    public function update($id, $cantidad) // parámetros sujetos a cambios si es necesario
+    public function update(Request $request, $id)
     {
-        // TODO: Actualizar cantidad de un producto.
+        $cantidad = $request->cantidad;
 
-        // En caso de que un producto ya esté en el carrito y se intente añadir de nuevo, se actualiza
-        // la cantidad actual de la base de datos sumándole la cantidad que el usuario quiera añadir
+        // Validar la cantidad
+        if ($cantidad <= 0) {
+            return redirect()->back()->with('error', 'La cantidad debe ser mayor que cero.');
+        }
+
+        // Buscar el producto en el carrito
+        $carrito = Carrito::find($id);
+
+        // Verificar si el producto existe en el carrito
+        if (!$carrito) {
+            return redirect()->back()->with('error', 'El producto no existe en el carrito.');
+        }
+
+        // Actualizar la cantidad del producto
+        $carrito->cantidad = $cantidad;
+        $carrito->save();
+
+        return redirect()->route('carrito')->with('success', 'Cantidad actualizada exitosamente.');
     }
+
 
     public function destroy($id) // quitar un producto del carrito
     {

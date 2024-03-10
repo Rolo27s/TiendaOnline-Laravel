@@ -1,0 +1,35 @@
+body {
+    padding: 0.5em; /* añado esto porque si no se ve feo y queda todo pegado al borde de la pantalla */
+}
+
+.nav-link {
+    font-size: 1.1em; /* para poner los links de arriba un poquito más grandes que en mi opinión estaban chiquitos */
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    background-color: #555;
+    color: red;
+}

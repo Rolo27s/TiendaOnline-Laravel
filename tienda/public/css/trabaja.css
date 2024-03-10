@@ -1,0 +1,63 @@
+
+.job-opportunities {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 10px; /* Agregado un borde redondeado */
+}
+
+.job-opportunities h2 {
+    margin-bottom: 10px;
+}
+
+.job-opportunities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.job-opportunities ul li {
+    margin-bottom: 5px;
+}
+
+.job-opportunities p {
+    margin-top: 20px;
+}
+
+.job-opportunities a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.job-opportunities a:hover {
+    color: #555;
+}
+
+
+.company-culture {
+    max-width: 600px;
+    margin: 40px auto; /* Añadido un margen superior e inferior de 40px */
+    padding: 20px;
+    background-color: #f9f9f9; /* Cambio de color de fondo */
+    border-radius: 10px; /* Agregado un borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.company-culture h2 {
+    margin-bottom: 10px;
+    color: #333; /* Cambio de color del título */
+}
+
+.company-culture p {
+    margin-top: 20px;
+    color: #555; /* Cambio de color del texto */
+}
+
+.company-culture a {
+    color: #007bff; /* Cambio de color del enlace */
+    text-decoration: none;
+}
+
+.company-culture a:hover {
+    color: #0056b3; /* Cambio de color del enlace al pasar el cursor */
+}

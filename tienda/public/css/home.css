@@ -1,0 +1,85 @@
+h2, div h2{
+    margin-left: 2%;
+    margin-top: 1%;
+}
+.slideshow-container {
+    width: 800px; /* Ancho fijo para el carrusel */
+    height: 800px; /* Altura fija para el carrusel */
+    margin: auto; /* Centra el carrusel horizontalmente */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el tamaño del contenedor */
+    position: relative;
+    border: 2px solid black;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%; /* Escala la imagen para que se ajuste al ancho del contenedor */
+    height: 100%; /* Escala la imagen para que se ajuste a la altura del contenedor */
+    object-fit: contain; /* Escala la imagen para cubrir completamente el contenedor, manteniendo su relación de aspecto */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}
+
+.testimonios {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+  
+.testimonio {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px;
+    background-color: lightslategrey;
+    margin: 20px;
+}
+  
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.nombre {
+    font-weight: bold;
+    color:brown;
+}
+  
+.puntuacion {
+    font-size: 20px;
+    color: #ffd700; /* Amarillo para resaltar la puntuación */
+}
+  
+.fecha {
+    font-size: 12px;
+    color: #888; /* Gris para la fecha */
+}
+  
+.comentario {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bolder;
+}
+
+.quienesSomos {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.quienesSomos h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.quienesSomos p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}

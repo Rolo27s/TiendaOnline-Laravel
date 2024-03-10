@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('carrito', function (Blueprint $table) {
+        Schema::create('carritos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('catalogo_id'); // campo en el que se va a guardar el ID del producto
             $table->foreign('catalogo_id')->references('id')->on('catalogos')->onDelete('cascade'); // declaración de la foreign key

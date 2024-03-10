@@ -9,6 +9,8 @@ class Carrito extends Model
 {
     use HasFactory;
 
+    // protected $table = 'carrito'; // Posible error
+
     public function catalogo()
     {
         return $this->belongsTo(Catalogo::class);

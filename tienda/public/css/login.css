@@ -1,0 +1,59 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
+    margin-top: 50px;
+}
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.invalid-feedback {
+    color: #dc3545;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
